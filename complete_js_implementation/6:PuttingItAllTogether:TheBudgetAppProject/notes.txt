@@ -1,0 +1,19 @@
+Javascript modules
+
+Keeps the units of code cleanly separated and organized
+
+Helps encapsulate data
+
+UI module:
+    Get input values
+    Add the new item to the UI
+    Update the UI
+
+Data module: 
+    Add the new item to a data structure
+    Calculate budget
+
+Controller module:
+    Add event handler
+
+MVC

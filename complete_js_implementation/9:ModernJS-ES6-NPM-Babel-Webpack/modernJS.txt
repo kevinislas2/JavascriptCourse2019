@@ -1,0 +1,141 @@
+
+Modern JS:
+
+    NodeJS & npm
+    (Libraries/frameworks)
+    Development tools
+
+    Babel converts ES6/ESNext -> ES5
+
+    ES6 Modules -> Webpack (Module bundler) -> Bundle
+
+    linux: xdg-open 'file'
+
+Babel latest with course:
+
+    instead of installing babel-core, babel-preset-env and babel-polyfill
+    we install @babel/core @babel/preset-env @babel/polyfill
+
+    npm install --save-dev @babel/core @babel/preset-env babel-loader
+    npm install --save @babel/polyfill
+
+    We also need to change the entry in webpack.config.js
+    From this:
+        entry: ['babel-polyfill', './src/js/index.js'],
+    To this:
+        entry: ['@babel/polyfill', './src/js/index.js'],
+
+    And also change the code in .babelrc
+    From this:
+        {
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "browsers": [
+                            "last 5 versions",
+                            "ie >= 8"
+                        ]
+                    }
+                }]
+            ]
+        }
+
+    To this:
+
+        {
+            "presets": [
+                ["@babel/env", {
+                    "targets": {
+                        "browsers": [
+                            "last 5 versions",
+                            "ie >= 8"
+                        ]
+                    }
+                }]
+            ]
+        }
+
+Webpack configuration:
+    We want to bundle js files into one bundle
+
+    Webpack 4 main components:
+        Entrypoint:
+        Output:
+        Loaders:
+        Plugins:
+            Allows us to do complex processing such as 
+            Copying the html and injecting the js code 
+            automatically
+
+            Html binding uses npm install html-webpack-plugin --save-dev
+
+    We need webpack-cli too
+    npm install webpack-cli
+
+    We can use webpack-dev-server for automatic reload
+
+Babel configuration:
+    Install babel npm packages
+    Add them to webpack.config.js
+    Setup .babelrc file
+    Include babel polyfills in webpack.config.js
+
+Planning our app with MVC architecture
+
+    Model:
+        //Conventionally models have uppercase names
+        Search.js (AJAX calls)
+        Recipe.js
+        List.js
+        Likes.js
+    Controller:
+        index.js (Connects Model and View)
+        //We could have multiple controllers,
+        //But for this app we can also use just one main controller
+
+    View:
+        searchView.js (Show results)
+        recipeView.js
+        listView.js
+        likesView.js
+
+How ES6 modules work:
+    import / exports
+
+    default exports (no name)
+    import x from module
+
+    We can also use module.exports to export an object
+    With functions/ variables, etc
+
+//Example of imports
+{
+    // Global app controller
+
+    // Modules do not need .js file termination
+    import string from './models/Search'
+
+    console.log(string);
+
+    import {add, multiply, ID} from './views/searchView';
+
+    // Rename functions
+    // import {add as a, multiply as m, ID} from './views/searchView';
+
+    import * as searchView from './views/searchView'
+
+    console.log(`Using imported functions ${add(ID, 2)} \
+    and ${multiply(3, 5)}. ${string}.`);
+
+    //SearchView contains the module and can be called
+    //As searchView.add(2+3);
+}
+{
+    //searchView.js
+    // Named export
+    export const add = (a, b) => a + b;
+    export const multiply = (a, b) => a * b;
+    export const ID = 23;
+}
+
+Rendering an AJAX loading spinner

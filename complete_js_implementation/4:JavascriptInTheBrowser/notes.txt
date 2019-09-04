@@ -1,0 +1,11 @@
+
+The DOM and DOM Manipulation
+
+DOM = Document Object Model
+Structured representation of an HTML Document
+
+DOM allows interaction between html objects and javascript
+
+Javascript can modify the DOM
+
+Event reference: https://developer.mozilla.org/es/docs/Web/Events

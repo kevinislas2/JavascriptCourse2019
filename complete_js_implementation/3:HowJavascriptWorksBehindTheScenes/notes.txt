@@ -1,0 +1,42 @@
+- How Javascript code is executed, Javascript Parsers and Engines
+
+Javascript always runs within an environment 
+(Web browsers, applications, NodeJS web server)
+
+- Execution Contexts and the Execution Stack
+
+Global execution context (window in browsers)
+name === window.name // true
+
+Functions and blocks are stacked above Global context
+
+Variable lookup goes top-bottom in the Execution Stack
+
+- Execution Contexts in Detail: Creation and Execution Phases and Hoisting
+
+Execution Context object:
+    Variable object
+    Scope chain
+    'this' Variable
+
+Variable object:
+    Hoisting:
+    Contains all the arguments that were passed to the Functions
+    function declarations are scanned, each function is mapped to
+        a property in the Variable object
+    Variable declarations are scanned, each variable is mapped to
+        a property in the Variable object
+        - Variables are set to undefined
+    
+
+- Scoping and the Scope Chain
+
+    Each function creates a scope
+
+- This variable
+
+    Regular function call: The this keyword points at the global object 
+    (window in browser)
+
+    //Seems like in javascript methods are == member functions in c++
+    Method call: The this variable points to the object (inside an object)

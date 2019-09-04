@@ -1,0 +1,42 @@
+Javascript can be added:
+    inline scripts (inside html)
+    as separate files
+
+Javascript is one of the three core technologies of web development:
+    Js: Programming  (verbs)
+    Css: Presentation (adjectives)
+    Html: Content (nouns)
+
+Js Versions:
+
+ES5 -> ES6(2015) -> ES7(2016) -> ES8(2017)
+
+Data types:
+
+    Number
+    String
+    Boolean
+    Undefined: Data type of a variable that does not have a value yet
+    Null :     Non-Existent
+
+Variable Mutation and Type Coercion
+
+Reverse iteration of an array is usually faster (because we only arr.length once)
+
+
+Javascript History:
+
+    Ecmascript : Language standard
+    Javascript : Implementation
+
+2009: ES5 -> Supported by all browsers
+2015: ES6 Biggest update to the language ever 
+    -> Yearly versions since then 
+
+ES6+ can be transpiled/polyfilled to ES5
+
+ES6 Compatibility table: https://kangax.github.io/compat-table/es6/
+
+Calles ESNext
+ES9/ES2018
+ES10/ES2019

@@ -1,0 +1,39 @@
+
+The event loop:
+    WEB APIS (outside main js engine):
+        setTimeout()
+        DOM events
+        XMLHttpRequest()
+
+    Callback move from WEB APIS to message queue
+    Wait until Execution Stack is empty to be called
+    Afterwards callback is pushed to execution stack to be executed
+
+The old way: Callback hell
+
+Promises:
+    Solving callback hell using ES6 Promises
+
+    Promise: Object that keeps track about whether a certain event
+        has happened.
+
+        Determines what happens after the event has happened;
+
+        Implements the concept of a future value that we expect;
+
+    Promise: Pending -> Settled/Resolved -> (Fulfilled/Rejected);
+
+        then
+        catch
+Async/Await:
+    ES8 Async/Await:
+    Await must be called inside an async function
+    async functions run on background threads
+
+AJAX:
+
+    Asynchronous Javascript And XML
+
+    Fetch server data asynchronously without reloading website
+
+    API: Application Programming Interface

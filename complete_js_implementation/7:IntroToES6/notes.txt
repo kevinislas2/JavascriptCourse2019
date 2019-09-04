@@ -1,0 +1,69 @@
+
+
+*variable declarations with let and const
+
+let has a block scope (var had function scope)
+let doesn't let you use the variable before defining it 
+const is constant variable
+
+*Blocks and IIFEs
+
+Block scopes using {}
+
+*Strings
+
+String templates using back quotes `${var}`
+string.startsWith('');
+string.endsWith('');
+string.includes('');
+string.repeat(4);
+
+
+*Arrow functions
+
+Functions inside an object have the object as this
+functions inside a function have this pointing to global (window)
+
+arrows can circumvent that problem but we have to be careful
+
+*Destructuring
+
+Access elements of objects
+//Similar to python's variable unpacking
+const [name, year] = ['John', 26];
+console.log(name);
+
+*Arrays
+
+//ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(curr => { 
+    //process
+});
+
+// Loop over array
+for(const element of boxesArr6) {
+    // Process element
+}
+
+*The Spread Operator
+
+arr = [1, 2, 3]
+unfold arr using ...arr
+
+*Rest and Default Parameters
+
+convert parameters into an array
+function isFullAge6(...years) {}
+
+*Maps
+// Hashmaps
+let map = new Map()
+map.set(key, value)
+map.get(key)
+
+*Classes and Subclasses
+
+*Promises
+
+*Native modules

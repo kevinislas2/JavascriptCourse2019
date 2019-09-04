@@ -1,0 +1,24 @@
+
+Objects:
+
+Almost everything in javascript is an object.
+
+Primitives: 
+    Numbers, Strings, Booleans, Undefined, Null
+
+Everything else is an object.
+
+A class is called a constructor or prototype in js
+Constructors create instances.
+
+In Js, inheritances is achieved by the prototype property of each object
+
+Object instances also have a prototype property.
+A constructor's prototype inherits from the Object's prototype.
+
+This is called the prototype chain.
+
+First class functions
+Functions are also objects!
+We can store them in a variable and pass them as arguments!
+Return a function from a function

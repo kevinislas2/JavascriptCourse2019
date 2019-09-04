@@ -1,0 +1,17 @@
+//Babel configuration
+{
+    // preset is a collection of code transform plugins
+    "presets" : [
+        //babel-preset-env
+        ["@babel/env", {
+            "targets": {
+                "browsers": [
+                    //Babel transforms code which are supported by
+                    //The last 5 versions
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+        }]
+    ]
+}
